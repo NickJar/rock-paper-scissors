@@ -16,9 +16,7 @@ function computerPlay () {
     else 
         return computer = "Scissors"; 
 }
-function startup(){
-    
-}
+
 function play(playerSelction, computerSelection){
     console.log(player1)
     if(player1 == "ROCK" && computer == "Rock"){
