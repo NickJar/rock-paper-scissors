@@ -8,7 +8,129 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>First To 5</h1>
+  <button class="rock">ROCK</button>
+  <button class="paper">PAPER</button>
+  <button class="scissors">SCISSORS</button>
   
+  <div class="results">
+    <h3 class="inResults"></h3>
+    <p class="currentScore">Your Score:</p>
+    <p class="enemyScore">Enemy Score:</p>
+    <p class="tieCounter">Ties:</p>
+  </div>
+
+  <script>
+    const rock = document.querySelector('.rock');
+    const paper = document.querySelector('.paper');
+    const scissors = document.querySelector('.scissors');
+    const results = document.querySelector('.results');
+    const inResults = document.querySelector('.inResults')
+    const currentScore = document.querySelector('.currentScore');
+    const enemyScore = document.querySelector('.enemyScore');
+    const ties = document.querySelector('.tieCounter');
+    let augment = 0;
+    let enemy = 0;
+    let tieCount = 0;
+     
+
+    rock.addEventListener('click', function() {
+        const computer = computerPlay();
+        inResults.textContent = (play("ROCK", computer));
+       if(result == "Win"){
+            currentScore.textContent = ('Your Score: '+ (augment += 1));
+            if(augment == 5) { 
+                inResults.textContent = ("You Win!");
+                augment = 0;
+                enemy = 0;
+                tieCount = 0;
+                ties.textContent = "Ties:"
+                currentScore.textContent = ("Your Score:");
+                enemyScore.textContent = ("Enemy Score:");
+        }
+           
+        }
+        if(result == "Lose"){
+            enemyScore.textContent = ('Enemy Score: '+ (enemy += 1));
+            if(enemy == 5){
+                inResults.textContent = ("You Lose!");
+                augment = 0;
+                enemy = 0;
+                tieCount = 0;
+                ties.textContent = "Ties:"
+                currentScore.textContent = ("Your Score:");
+                enemyScore.textContent = ("Enemy Score:");
+            }
+        }
+        if(result == "Tie") {
+            ties.textContent = ('Ties: '+ (tieCount += 1));
+        }
+    });
+    paper.addEventListener('click', function() {
+        const computer = computerPlay();
+        inResults.textContent = (play("PAPER", computer));
+        if(result == "Win"){
+            currentScore.textContent = ('Your Score: '+ (augment += 1));
+            if(augment == 5) { 
+                inResults.textContent = ("You Win!");
+                augment = 0;
+                enemy = 0;
+                tieCount = 0;
+                ties.textContent = "Ties:"
+                currentScore.textContent = ("Your Score:");
+                enemyScore.textContent = ("Enemy Score:");
+        }
+     }
+     if(result == "Lose"){
+            enemyScore.textContent = ('Enemy Score: '+ (enemy += 1));
+            if(enemy == 5){
+                inResults.textContent = ("You Lose!");
+                augment = 0;
+                enemy = 0;
+                tieCount = 0;
+                ties.textContent = "Ties:"
+                currentScore.textContent = ("Your Score:");
+                enemyScore.textContent = ("Enemy Score:");
+            }
+        }
+        if(result == "Tie") {
+            ties.textContent = ('Ties: '+ (tieCount += 1));
+        }
+    });
+   scissors.addEventListener('click', function() {
+        const computer = computerPlay();
+        inResults.textContent = (play("SCISSORS", computer));
+        if(result == "Win"){
+            currentScore.textContent = ('Your Score: '+ (augment += 1));
+            if(augment == 5) { 
+                inResults.textContent = ("You Win!");
+                augment = 0;
+                enemy = 0;
+                tieCount = 0;
+                ties.textContent = "Ties:"
+                currentScore.textContent = ("Your Score:");
+                enemyScore.textContent = ("Enemy Score:");
+        }
+    }
+        if(result == "Lose"){
+            enemyScore.textContent = ('Enemy Score: '+ (enemy += 1));
+            if(enemy == 5){
+                inResults.textContent = ("You Lose!");
+                augment = 0;
+                enemy = 0;
+                tieCount = 0;
+                ties.textContent = "Ties:"
+                currentScore.textContent = ("Your Score:");
+                enemyScore.textContent = ("Enemy Score:");
+            }
+        }
+        if(result == "Tie") {
+            ties.textContent = ('Ties: '+ (tieCount += 1));
+        }
+    });
+
     
+    
+  </script>
 </body>
 </html>

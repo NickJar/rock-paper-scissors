@@ -1,11 +1,12 @@
 
-let input;
-let player1;
+// let input;
+// let player1;
+// let playerScore=0;
+// let computerScore=0;
 let computer;
 let result;
-let playerScore=0;
-let computerScore=0;
-game();
+
+// game();
 
 function computerPlay () {
     let num = Math.floor(Math.random()*3)+1;
@@ -18,110 +19,103 @@ function computerPlay () {
 }
 
 function play(playerSelction, computerSelection){
-    console.log(player1)
-    if(player1 == "ROCK" && computer == "Rock"){
+    if(playerSelction == "ROCK" && computerSelection == "Rock"){
         result = "Tie";
-        return console.log("They chose Rock, it's a tie!")
+        return "They chose Rock, it's a tie!";
     }
-    else if(player1 == "ROCK" && computer == "Paper"){
+    else if(playerSelction == "ROCK" && computerSelection == "Paper"){
         result = "Lose";
-        return console.log("They chose paper, You Lose!")
+        return "Paper beats Rock, You Lose!";
     }
-    else if(player1 == "ROCK" && computer == "Scissors"){
+    else if(playerSelction == "ROCK" && computerSelection == "Scissors"){
         result = "Win";
-        return console.log("They chose scissors, You Win!")
+        return "Rock beats Scissors, You Win!";
     }
-    else if(player1 == "PAPER" && computer == "Paper"){
+    else if(playerSelction == "PAPER" && computerSelection == "Paper"){
         result = "Tie";
-        return console.log("They chose paper, It's a tie!")
+        return "They chose paper, It's a tie!";
     }
-    else if(player1 == "PAPER" && computer == "Rock"){
+    else if(playerSelction == "PAPER" && computerSelection == "Rock"){
         result = "Win";
-        return console.log("They chose Rock, You Win!")
+        return "Paper beats Rock, You Win!";
     }
-    else if(player1 == "PAPER" && computer == "Scissors"){
+    else if(playerSelction == "PAPER" && computerSelection == "Scissors"){
         result = "Lose";
-        return console.log("They chose scissors, You Lose!")
+        return "Scissors beats Paper, You Lose!";
     }
-    else if(player1 == "SCISSORS" && computer == "Paper"){
+    else if(playerSelction == "SCISSORS" && computerSelection == "Paper"){
         result = "Win";
-        return console.log("They chose paper, You Win!")
+        return "Scissors beats Paper, You Win!";
     }
-    else if(player1 == "SCISSORS" && computer == "Rock"){
+    else if(playerSelction == "SCISSORS" && computerSelection == "Rock"){
         result = "Lose";
-        return console.log("They chose Rock, You Lose!")
+        return "Rock beats Scissors, You Lose!";
     }
     else {
         result = "Tie";
-        return console.log("They chose scissors, It's a tie!")
+        return "They chose scissors, It's a tie!";
     }
 }
-function game()
-{
-   
-    for(let i = 0; i < 5; i++)
-    {
-        guess();
-        computer = computerPlay();
-        play(player1, computer);
-        if(result == "Lose"){
-            computerScore++;
-        }
-        else if(result == "Win"){
-            playerScore++;
-        }
+// function game()
+// {
+//     //Runs the game 5 times 
+//     // for(let i = 0; i < 5; i++)
+//     // {
+//         guess();
+//         computer = computerPlay();
+//         play(player1, computer);
+//         if(result == "Lose"){
+//             computerScore++;
+//         }
+//         else if(result == "Win"){
+//             playerScore++;
+//         }
         
 
-    }
-    console.log(computerScore);
-    console.log(playerScore);
-    if(playerScore > computerScore){
-        console.log("You Win! You won "+playerScore+" of the 5 matches");
-        let playAgain=prompt("Do you want to play again y or n?: ")
-        if(playAgain == "y"){
-            computerScore=0;
-            playerScore=0;
-            return game();
-        }
-        else{
-            return
-        }
-    }
-    else if(computerScore > playerScore){
-        console.log("You Lose! The computer won "+computerScore+" of the 5 matches")
-        let playAgain=prompt("Do you want to play again y or n?: ")
-        if(playAgain == "y"){
-            computerScore=0;
-            playerScore=0;
-            return game();
-        }
-        else{
-            return
-        }
-    }
-    else{
-        console.log("It's a tie! You both won "+playerScore+" of the 5 matches")
-        let playAgain=prompt("Do you want to play again y or n?: ")
-        if(playAgain == "y"){
-            computerScore=0;
-            playerScore=0;
-            return game();
-        }
-        else{
-            return
-        }
-    }
     
+//     console.log(computerScore);
+//     console.log(playerScore);
+//     if(playerScore > computerScore){
+//         console.log("You Win! You won "+playerScore+" of the 5 matches");
+//         let playAgain=prompt("Do you want to play again y or n?: ")
+//         if(playAgain == "y"){
+//             computerScore=0;
+//             playerScore=0;
+//             game();
+//         }
+       
+//     }
+//     else if(computerScore > playerScore){
+//         console.log("You Lose! The computer won "+computerScore+" of the 5 matches")
+//         let playAgain=prompt("Do you want to play again y or n?: ")
+//         if(playAgain == "y"){
+//             computerScore=0;
+//             playerScore=0;
+//             game();
+//         }
+       
+//     }
+//     else{
+//         console.log("It's a tie! You both won "+playerScore+" of the 5 matches")
+//         let playAgain=prompt("Do you want to play again y or n?: ")
+//         if(playAgain == "y"){
+//             computerScore=0;
+//             playerScore=0;
+//             game();
+//         }
+        
+//     }
+    
+// }
+// }
+// function guess(){
+//     input = prompt("Enter either rock, paper, or scissors: ");
+//     player1 = input.toUpperCase();
+//     if(player1 !== "ROCK" && player1 !== "PAPER" && player1 !== "SCISSORS"){
+//         console.log("Invalid Input: Only rock, paper, or scissors is accepted")
+//         return guess()
+//     }
+//     else{
 
-}
-function guess(){
-    input = prompt("Enter either rock, paper, or scissors: ");
-    player1 = input.toUpperCase();
-    if(player1 !== "ROCK" && player1 !== "PAPER" && player1 !== "SCISSORS"){
-        console.log("Invalid Input: Only rock, paper, or scissors is accepted")
-        return guess()
-    }
-    else{
-
-    }
-}
+//     }
+// }
