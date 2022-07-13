@@ -16,7 +16,7 @@
   <div class="results">
     <h3 class="inResults"></h3>
     <p class="currentScore">Your Score:</p>
-    <p class="enemyScore">Enemy Score:</p>
+    <p class="enemyScore">Computer Score:</p>
     <p class="tieCounter">Ties:</p>
   </div>
 
@@ -46,12 +46,12 @@
                 tieCount = 0;
                 ties.textContent = "Ties:"
                 currentScore.textContent = ("Your Score:");
-                enemyScore.textContent = ("Enemy Score:");
+                enemyScore.textContent = ("Computer Score:");
         }
            
         }
         if(result == "Lose"){
-            enemyScore.textContent = ('Enemy Score: '+ (enemy += 1));
+            enemyScore.textContent = ('Computer Score: '+ (enemy += 1));
             if(enemy == 5){
                 inResults.textContent = ("You Lose!");
                 augment = 0;
@@ -59,7 +59,7 @@
                 tieCount = 0;
                 ties.textContent = "Ties:"
                 currentScore.textContent = ("Your Score:");
-                enemyScore.textContent = ("Enemy Score:");
+                enemyScore.textContent = ("Computer Score:");
             }
         }
         if(result == "Tie") {
@@ -78,11 +78,11 @@
                 tieCount = 0;
                 ties.textContent = "Ties:"
                 currentScore.textContent = ("Your Score:");
-                enemyScore.textContent = ("Enemy Score:");
+                enemyScore.textContent = ("Computer Score:");
         }
      }
      if(result == "Lose"){
-            enemyScore.textContent = ('Enemy Score: '+ (enemy += 1));
+            enemyScore.textContent = ('Computer Score: '+ (enemy += 1));
             if(enemy == 5){
                 inResults.textContent = ("You Lose!");
                 augment = 0;
@@ -109,11 +109,11 @@
                 tieCount = 0;
                 ties.textContent = "Ties:"
                 currentScore.textContent = ("Your Score:");
-                enemyScore.textContent = ("Enemy Score:");
+                enemyScore.textContent = ("Computer Score:");
         }
     }
         if(result == "Lose"){
-            enemyScore.textContent = ('Enemy Score: '+ (enemy += 1));
+            enemyScore.textContent = ('Computer Score: '+ (enemy += 1));
             if(enemy == 5){
                 inResults.textContent = ("You Lose!");
                 augment = 0;
@@ -121,7 +121,7 @@
                 tieCount = 0;
                 ties.textContent = "Ties:"
                 currentScore.textContent = ("Your Score:");
-                enemyScore.textContent = ("Enemy Score:");
+                enemyScore.textContent = ("Computer Score:");
             }
         }
         if(result == "Tie") {
